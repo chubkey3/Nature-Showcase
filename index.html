@@ -1,0 +1,391 @@
+<!-- Basic Navbar Template -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nature Photo Showcase</title>
+<link rel="icon" href="https://cdn.pixabay.com/photo/2020/03/18/10/09/mountain-4943472_960_720.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@keyframes fadein{
+    from {opacity: 0; margin-top: 50px;}
+    to {opacity: 1; margin-top: 0}
+}
+@keyframes fadeinabout{
+    from {opacity: 0; margin-top: 300px;}
+    to {opacity: 1; margin-top: 250px;}
+}
+@keyframes fadeinaboutimg{
+    from {opacity: 0; margin-top: 170px;}
+    to {opacity: 1; margin-top: 120px;}
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: museo-sans,helvetica,Microsoft YaHei,微软雅黑,STXihei,华文细黑,sans-serif;
+    color: black;
+    background-color: lightskyblue;
+    /*background-image: linear-gradient(0.25turn, mediumaquamarine, aquamarine);*/
+    /*background-image: linear-gradient(0.25turn, #06beb6, #48b1bf);*/
+    background-image: linear-gradient(0.25turn, #eecda3, #ef629f);
+}
+div {
+    font-family: "Poppins",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+#nav {
+  list-style-type: none;
+  margin-top: auto;
+  padding: 0;
+  background-image: linear-gradient(0.25turn, #eecda3, #ef629f);
+  /*background-image: linear-gradient(0.25turn, mediumaquamarine, aquamarine);*/
+  /*background-image: linear-gradient(0.25turn, #06beb6, #48b1bf);*/
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation-name: fadein;
+  animation-duration: 1s;
+  height: 60px;
+}
+
+.button {
+  display: inline-block;
+  color: #000;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+  position: relative;
+}
+/*
+.button:hover {
+   
+  background-color: #ff5e62;
+ 
+  color: black;
+}
+*/
+a span {
+    height: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: block;
+    left: -150%;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #f45c43, #f45c43);
+    opacity: 0;
+}
+
+.button:hover span{
+    opacity: 1;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+#download {
+    position: relative;
+    display: inline;
+    background-color: crimson;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    float: right;
+    border-radius: 15px;
+    height: 10%;
+    transition: all 0.3s;
+}
+#download:hover {
+    opacity: 0.7;
+    transform:scale(0.9,0.9);
+}
+#gallary-but {
+    position: relative;
+    display: inline;
+    background-color: crimson;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    float: right;
+    border-radius: 15px;
+    height: 10%;
+    transition: all 0.3s;
+    text-align: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    border-color: red;
+    outline: none;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+}
+#gallary-but:hover {
+    opacity: 0.7;
+    transform:scale(0.9,0.9);
+}
+#mail {
+    border-radius: 10px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    /*max-width: 600px;*/
+    max-width: 600px;
+    height: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    animation-name: fadein;
+    animation-duration: 1s;
+    margin-bottom: 100px;
+}
+.large-title {
+    font-size: 50px;
+    padding: 10px;
+}
+.medium-title {
+    padding: 10px;
+}
+#send-message {
+    border-radius: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: #D8D8D8;
+    height: 100px;
+    overflow: auto;
+    /*resize: none;*/
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    right: 100px;
+    line-height: normal;
+    max-width: 550px;
+    padding: 15px;
+}
+.one-line-input {
+    border-radius: 50px;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: none;
+    background-color: #D8D8D8;
+    max-width: 550px;
+    padding: 15px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#submit-message {
+    height: 45px;
+    margin-top: 5px;
+    background-color: crimson;
+    border-radius: 30px;
+    border-color: crimson;
+    cursor: pointer;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
+    color: white;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 5px;
+    outline: none;
+}
+::placeholder {
+    font-size: 15px;
+    opacity: 0.5;
+    color: #787878;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+#about {
+    animation-name: fadeinabout;
+    animation-duration: 1s;
+    margin-top: 250px;
+    /*max-width: 600px;*/
+    height: 500px;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 250px;
+    margin-left: 150px;
+}
+#title-image {
+    animation-name: fadeinaboutimg;
+    animation-duration: 1s;
+    margin-top: 120px;
+    margin-right: 120px;
+    margin-bottom: 200px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+#info {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: block;
+}
+#info-text {
+    padding: 50px;
+    font-size: 20px;
+}
+#showcase {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+}
+.showcase-img {
+    max-width: 500px;
+    max-height: 500px;
+    margin: 4px;
+    transition: all 0.5s ease;
+}
+.showcase-img:hover {
+    transform: scale(1.05);
+}
+.showcase-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.icon {
+    font-size: 30px; 
+    color: black; 
+    border: none; 
+    outline: none; 
+    margin-right: 10px; 
+    background: linear-gradient(#614385, #516395); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+.icon:hover {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    font-size: 20px;
+}
+</style>
+<script>
+    function mail(){
+        let subject = document.getElementById('subject').value;
+        let message = document.getElementById('send-message').value;
+        if (subject != "" || message != ""){
+            window.open('mailto:spaghettiandmeatballs6969@gmail.com?body='+message+'&subject='+subject);
+        } else {
+            alert('Please Fill Out The Subject and Message Fields.')
+        }
+    }
+    function scrolltop(){
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</head>
+<body>
+<ul id="nav">
+    <li><a href = "index.html"><img src="icon.jpg" style = "width: 89px; height: 50px; display: inline;   position: relative; float: left; margin-left: 10px; margin-top: 5px; padding-bottom: 100px"></a></li>
+  <li><a class="button" href="#top"><span></span>Home</a></li>
+  <li><a class="button" href="#about-heading"><span></span>About</a></li>
+  <li><a class="button" href="#showcase"><span></span>Gallery</a></li>
+  <li><a class="button" href="#mail"><span></span>Contact</a></li>
+  <!-- <li><a id="download" href="https://drive.google.com/uc?export=download&id=18UJ_hDFL90q32PJBkV6F-ZMAToXhszBA">Download</a></li>-->
+<!-- Make into button style class-->
+</ul>
+<div id="about">
+    <!--
+    <div style="max-width: 600px;">
+        <h1 class="large-title"><strong>Nature Photo Showcase</strong></h1>
+        <h4 class="medium-title">Welcome to my website for displaying beautiful snapshots of nature that I find visually appealing. Feel free to view and download any image as well as contact me if you have questions.</h1></div>
+    </div>
+    -->
+    <div style = "max-width: 600px;">
+        <h1 class="large-title"><strong>Nature Photo Showcase</strong></h1>
+        <h4 class="medium-title">Welcome to my website for displaying beautiful snapshots of nature that I find visually appealing.</h1></div>  
+    </div>
+    <img style = "float: right;" id="title-image" src="beauty.jpg" alt="Beauty...">   
+    <!--
+    <div id="about-text">
+        <div id="image-title">
+    -->
+</div>
+<div style = "background-color: lightskyblue; padding: 50px; box-shadow: 0 0 15px rgba(0,0,0,0.6); margin-bottom: 50px;">
+<h1 style = "text-align: center; margin-bottom: 100px; font-weight: bold; font-size: 50px;" id = "about-heading"><strong>What Is This Website?</strong></h1>
+<img src="nature.jpg" class = "image" style = "width: 50%; height: 50%; margin-top: 0px;">
+
+    <div id="info">
+        <p id="info-text">This website was built originally for the purpose of learning HTML, CSS, and Javascript but I felt a central theme would be a lot more rewarding as a final product. 
+            It's main purpose is showing a variety of images related to nature and landscapes to hopefully brighten your day! I hope you stick around and see what images there are on display.
+        </p>
+    </div>
+</div>
+<div id="showcase">
+    <h1 style = "text-align: center; margin-bottom: 100px; font-weight: bold; font-size: 50px;" id = "gallary-heading"><strong>Gallary</strong></h1>
+    <div class="showcase-display">
+        <img src="showcase1.jpg" class = "showcase-img">
+        <img src="showcase2.jpg" class = "showcase-img">
+        <img src="showcase3.jpg" class = "showcase-img">
+        <img src="showcase4.jpg" class = "showcase-img">
+        <img src="showcase5.jpg" class = "showcase-img">
+        <img src="showcase6.png" class = "showcase-img">
+    </div>
+    <a href="showcase.html"><input id="gallary-but" type="button" value="Click To View Full Gallery!"></a>
+</div>
+<img class="image" src="nature.gif" alt="Enjoy This Masterpiece">
+<div id="mail">
+    <h1 class="medium-title" style="padding: 0px; font-family: calm;">Contact Me</h3><br>
+    <input id='subject' class="one-line-input" type="text" name="subject" placeholder="Subject"><br>
+    <textarea id="send-message" type="text" name="message" placeholder="Message"></textarea><br>
+    <input id="submit-message" type="submit" value="Send →" onclick="mail()">
+</div>
+</div>
+<footer>Copyright © 2021-2021 Jason Louie <a href="https://www.github.com/Ravager6969" class = "icon"><i class="fa">&#xf09b;</i></a><a href = "https://www.instagram.com/jason_louie33/" class = "icon"><i class = "fa fa-instagram" ></i></a></footer>
+</body>
+</html>
+<!--
+    Great links:
+    https://digitalsynopsis.com/design/beautiful-color-ui-gradients-backgrounds/ - gradients
+-->
+<!--
+    Fix Navbar moving to far down
+-->
+<!--
+    https://www.netlify.com/
+-->
