@@ -1,0 +1,267 @@
+<html>
+<head>
+<link rel="icon" href="https://cdn.pixabay.com/photo/2020/03/18/10/09/mountain-4943472_960_720.jpg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<style>
+@font-face {
+font-family: 'regular';
+src: url('MyHappyEndingRegular-Lx7G.ttf');
+}
+@keyframes fadein{
+    from {opacity: 0; margin-top: 50px;}
+    to {opacity: 1; margin-top: 0;}
+}
+@keyframes fadeintitle{
+    from {opacity: 0; margin-top: 200px;}
+    to {opacity: 1; margin-top: 150px;}
+}
+@keyframes fadeingallery{
+    from {opacity: 0; margin-top: 150px;}
+    to {opacity: 1; margin-top: 100px;}
+}
+@font-face {
+    font-family: 'calm';
+    src: url('LoveheartsXyz-7G8V.ttf');
+}
+@keyframes fadebut{
+    from {opacity: 1; visibility: visible;}
+    to {opacity: 1; visibility: hidden;}
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: museo-sans,helvetica,Microsoft YaHei,微软雅黑,STXihei,华文细黑,sans-serif;
+    animation-name: 'fadein';
+    animation-duration: 1s;
+    background-image: linear-gradient(0.25turn, #4568dc, #b06ab3);
+    /*background-image: linear-gradient(0.25turn, #614385,#516395);*/
+}
+#nav {
+  list-style-type: none;
+  margin-top: auto;
+  padding: 0;
+  background-image: linear-gradient(0.25turn, #4568dc, #b06ab3);
+  /*background-image: linear-gradient(0.25turn, #614385,#516395);*/
+  /*background-image: linear-gradient(0.25turn, mediumaquamarine, aquamarine);*/
+  /*background-image: linear-gradient(0.25turn, #06beb6, #48b1bf);*/
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation-name: fadein;
+  animation-duration: 1s;
+  margin-bottom: 500px;
+  height: 60px;
+}
+
+.button {
+  display: inline;
+  color: #000;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  float: left;
+  margin-left: 20px;
+}
+
+.button:hover {
+  background-color: #ff5e62;
+  color: black;
+}
+#download {
+    
+    z-index: 2;
+    position: fixed;
+    display: inline;
+    background-color: crimson;
+    color: white;
+    padding: 14px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 15px;
+    height: 10%;
+    transition: all 0.3s;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  margin-bottom: 100px;
+    bottom: 0;
+    right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#download:hover {
+    opacity: 0.7;
+    transform:scale(0.9,0.9);
+}
+#title {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 150px;
+    animation-name: fadeintitle;
+    animation-duration: 1s;
+    font-family: 'calm';
+}
+.grid {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    animation-name: fadeingallery;
+    animation-duration: 1s;
+    /*
+    background-image: linear-gradient(0.25turn, #4568dc, #b06ab3);
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    */
+}
+.img {
+    max-width: 1800px;
+    /*
+    padding-top: 50px;
+    padding-bottom: 50px;
+    */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    height: 900px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+}
+.action-but {
+    display: inline;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    float: right;
+    border-radius: 15px;
+    height: 50px;
+    transition: all 0.3s;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 300px;
+  margin-right: 300px;
+  width: 200px;
+  background: crimson;
+  outline: none;
+  border: 50px black;
+}
+.action-but:hover {
+    transform:scale(0.9,0.9);
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.icon {
+    font-size: 30px; 
+    color: black; 
+    border: none; 
+    outline: none; 
+    margin-right: 10px; 
+    background: linear-gradient(#614385, #516395); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+}
+.icon:hover {
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    font-size: 20px;   
+}
+</style>
+<script>
+    window.onscroll = hide;
+    function hide(){
+        if (window.scrollY == 0){
+            document.getElementById("download").style.visibility = "hidden";
+        } else {
+            document.getElementById("download").style.visibility = "visible";
+            
+        }
+    }
+    function like(n){
+        var color = document.getElementById("like"+n).style.background;
+        var text = document.getElementById("like"+n).innerHTML;
+        var value = parseInt(text.slice(1,text.length))
+        if (color == "crimson"){
+            document.getElementById("like"+n).style.background = 'grey';        
+            value -= 1;
+        } else{
+            document.getElementById("like"+n).style.background = 'crimson';
+            value += 1
+        }
+        document.getElementById("like"+n).innerHTML = '♥ '+value;
+    }
+    
+    /*
+    have a general function that updates all values
+    like calls that function after it's done updating the text file
+    */
+</script>
+</head>
+<body>
+<ul id="nav">
+    <li><a href = "index.html"><img src="icon.jpg" style = "width: 89px; height: 50px; display: inline;   position: relative; float: left; margin-left: 10px; margin-top: 5px; padding-bottom: 100px"></a></li>
+    <li><a class="button" href="index.html">Home</a></li>
+    <li><a class="button" href="index.html#about-heading">About</a></li>
+    <li><a class="button" href="index.html#showcase">Gallery</a></li>
+    <li><a class="button" href="index.html#mail">Contact</a></li>
+    <!--<li><a id="download" href="https://drive.google.com/uc?export=download&id=18UJ_hDFL90q32PJBkV6F-ZMAToXhszBA">Download</a></li>-->
+    <!-- Make into button style class-->
+</ul>
+
+<h1 id = "title">Gallery</h1>
+<div class = "grid">
+    <img class = "img" src="gallery/1.jpg">
+    <div class = "actions" id = "1">
+        <button id = "like1" class = "action-but" onclick = "like('1')" style = "background: grey;">♥ 0</button>
+        <a href = "https://drive.google.com/uc?export=download&id=1s_DT28nQDlPpLmUKocKh-WwgM-CHDC_C"><button class = "action-but">Download ⬇</button></a>
+    </div>
+    <img class = "img" src="gallery/2.jpg">
+    <img class = "img" src="gallery/3.jpg">
+    <img class = "img" src="gallery/4.jpg">
+    <img class = "img" src="gallery/5.jpg">
+    <img class = "img" src="gallery/6.jpg">
+    <img class = "img" src="gallery/7.jpg">
+    <img class = "img" src="gallery/8.jpg">
+</div>
+<footer><a id="download" href="#top" style="max-height: 20px; right: 0; bottom: 0;">Back to Top ↑</a><br><br><br></footer>
+<footer>Copyright © 2021-2021 Jason Louie <a href="https://www.github.com/Ravager6969" class = "icon"><i style="font-size:30px; color: black;" class="fa">&#xf09b;</i></a><a href = "https://www.instagram.com/jason_louie33/" class = "icon"><i class = "fa fa-instagram" ></i></a></footer>
+</body>
+</html>
+<!--
+    Just a title and iterate through every file in a folder and display them all in a grid like unsplash
+    can rate and maybe comment on pictures
+    add download button links at the bottom of every image
+    revamp navbar
+    connect bar in navbar is a dropdown bar with social medias available to click name it "connect"
+-->
+<!--
+    liking system
+    iterate 1-x using element ids and share css using class
+    button onclick calls general function but has the arguement of it's parent's id to know which number to add to
+    you could use vue or smth like that
+-->
